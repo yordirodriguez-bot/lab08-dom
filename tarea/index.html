@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tarea - Gestor de Tareas Interactivo</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 600px;
+        margin: 30px auto;
+      }
+      section {
+        border: 1px solid #ccc;
+        padding: 16px;
+        border-radius: 8px;
+      }
+      .completada {
+        text-decoration: line-through;
+        color: #7f8c8d;
+      }
+      .error {
+        color: #e74c3c;
+        font-weight: bold;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+      }
+      button {
+        cursor: pointer;
+        margin-left: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h2>Lista de Tareas Pendientes</h2>
+      <form id="formTarea">
+        <input id="tituloTarea" type="text" placeholder="Ej: Estudiar DOM" />
+        <input
+          id="prioridadTarea"
+          type="text"
+          placeholder="Prioridad (Alta/Baja)"
+        />
+        <button type="submit">Agregar Tarea</button>
+      </form>
+      <p id="msgError" class="error"></p>
+      <ul id="listaTareas"></ul>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>
